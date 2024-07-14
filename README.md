@@ -1,6 +1,3 @@
-Aqui está um exemplo de um `README.md` para a sua aplicação Node.js seguindo a arquitetura hexagonal e utilizando as tecnologias mencionadas:
-
-```markdown
 # Node.js API com Arquitetura Hexagonal
 
 Este projeto é uma API Node.js estruturada seguindo a arquitetura hexagonal, utilizando TypeScript, Express, Sequelize, Zod, e outras ferramentas modernas.
