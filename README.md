@@ -59,8 +59,8 @@ src/
 1. Clone o repositório:
 
 ```sh
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/marcelopc/boilerplate-api.git
+cd boilerplate-api
 ```
 
 2. Instale as dependências:
