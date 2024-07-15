@@ -1,10 +1,10 @@
 {
   "database": {
     "development": {
-      "username": "root",
-      "password": "Windows@10",
-      "database": "tyrell",
-      "host": "127.0.0.1",
+      "username": "",
+      "password": "",
+      "database": "",
+      "host": "",
       "dialect": "mysql",
       "operatorsAliases": 0,
       "logging": false,
