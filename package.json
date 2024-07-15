@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/adapters/web/express/server.ts",
     "test": "vitest",
-    "build": "tsup src"
+    "build": "tsup src",
+    "models": "tsx src/adapters/persistence/sequelize/dataBaseToModels.ts"
   },
   "keywords": [],
   "author": "marcelopc",
@@ -31,6 +32,7 @@
     "express": "^4.19.2",
     "mysql2": "^3.10.2",
     "sequelize": "^6.37.3",
+    "sequelize-auto": "^0.8.8",
     "zod": "^3.23.8"
   }
 }

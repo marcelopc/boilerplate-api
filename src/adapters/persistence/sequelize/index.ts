@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Dialect } from 'sequelize';
+import { Sequelize, Dialect } from 'sequelize';
 
 type InputStartConnection = {
   database: string;
