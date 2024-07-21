@@ -1,9 +1,8 @@
 import Express from 'express';
 import routes from './routers';
-import Config from '../../../core/infra/config';
-import { Database } from '../../../core/infra/config/types';
-import { createServer } from 'http';
-import { dataBase } from '../../persistence';
+import { Database } from '../../../infra/config/types';
+import { createServer as createServerHttp } from 'http';
+import { dataBase } from '../../../infra/persistence';
 
 export interface ErrnoException extends Error {
   errno?: number;
@@ -31,14 +30,14 @@ const onError = (error: ErrnoException, port: number) => {
   }
 };
 
-const startServer = async (port: number, dataBaseConfig: Database) => {
+const createServer = async (port: number, dataBaseConfig: Database) => {
   try {
     await dataBase.connection(dataBaseConfig);
     const app = Express();
 
     app.use('/api', routes);
 
-    const server = createServer(app);
+    const server = createServerHttp(app);
     server.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
@@ -48,4 +47,4 @@ const startServer = async (port: number, dataBaseConfig: Database) => {
   }
 };
 
-startServer(Config.server.port, Config.database);
+export default createServer;

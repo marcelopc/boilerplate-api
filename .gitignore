@@ -8,3 +8,7 @@ dist/
 src/core/infra/config/config.json
 
 src/adapters/persistence/sequelize/models/
+
+src/infra/persistence/sequelize/models/
+
+src/infra/config/config.json

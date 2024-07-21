@@ -1,4 +1,4 @@
-import { Database } from '../../core/infra/config/types';
+import { Database } from '../config/types';
 import Sequelize from './sequelize';
 
 export const dataBase = {

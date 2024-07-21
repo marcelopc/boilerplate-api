@@ -1,5 +1,5 @@
 import { SequelizeAuto, type AutoOptions } from 'sequelize-auto';
-import Config from '../../../core/infra/config';
+import Config from '../../config';
 import { type Dialect } from 'sequelize';
 
 const fs = require('fs');

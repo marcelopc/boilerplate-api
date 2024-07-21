@@ -26,7 +26,7 @@ export const startConnection = async (input: InputStartConnection) => {
     );
 
     await sequelizeInstance.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('Conexão com o database realizada com sucesso!');
     return sequelizeInstance;
   } catch (error) {
     throw error;
