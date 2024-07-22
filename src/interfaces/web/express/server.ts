@@ -1,4 +1,4 @@
-import Express from 'express';
+import Express, { json, urlencoded } from 'express';
 import routes from './routers';
 import { Database } from '../../../infra/config/types';
 import { createServer as createServerHttp } from 'http';
@@ -34,6 +34,8 @@ const createServer = async (port: number, dataBaseConfig: Database) => {
   try {
     await dataBase.connection(dataBaseConfig);
     const app = Express();
+    app.use(json({ limit: '50mb' }));
+    app.use(urlencoded({ extended: false, limit: '50mb' }));
 
     app.use('/api', routes);
 
